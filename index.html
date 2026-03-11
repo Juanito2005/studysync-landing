@@ -45,36 +45,36 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#inicio">StudySync</a>
-        
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
+            <div class="container">
+                <a class="navbar-brand" href="#inicio">StudySync</a>
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Inicio</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre StudySync</a>
-                </li>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre StudySync</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#caracteristicas">Características</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#caracteristicas">Características</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#FAQ">FAQ</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ">FAQ</a>
+                        </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacta con nosotros</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacta con nosotros</a>
+                        </li>
 
-            </ul>
-        </div>
-    </div>
-</nav>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -83,44 +83,96 @@
             <a class="btn btn-primary" href="#contacto">Pruébalo gratis</a>
         </section>
 
-        <section id="sobre">
-            <table class="table table-bordered">
-                <thead>
+        <!-- SECCIÓN SOBRE -->
+        <section id="sobre" class="container py-5">
+            <h2>Comparativa: StudySync vs otras apps</h2>
+            <p class="lead">Resumen objetivo de criterios clave para evaluar la utilidad de StudySync frente a aplicaciones genéricas de productividad.</p>
+
+            <table class="table table-bordered" aria-describedby="tabla-comparativa">
+                <caption id="tabla-comparativa">Comparativa de características y resultados</caption>
+                <thead class="table-light">
                     <tr>
-                        <th>Criterio a evaluar</th>
-                        <th>StudySync</th>
-                        <th>Otras apps</th>
+                        <th scope="col">Criterio a evaluar</th>
+                        <th scope="col">StudySync (propuesto)</th>
+                        <th scope="col">Otras apps (típico)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Efectividad de estudio</td>
-                        <td>StudySync incrementa tu horas de estudio en 40%!!</td>
-                        <td>La mayoria de apps solo mantienen tus viejas rutinas de estudio</td>
+                        <th scope="row">Objetivo principal</th>
+                        <td>Planificación de rutinas de estudio y registro de sesiones con análisis por materia.</td>
+                        <td>Gestión de tareas o temporizadores genéricos sin foco en estudio.</td>
                     </tr>
+
                     <tr>
-                        <td>Nombre del criterio 2</td>
-                        <td>Dato de mi producto</td>
-                        <td>Dato de la competencia</td>
+                        <th scope="row">Efectividad medible</th>
+                        <td>Ayuda a aumentar constancia y horas efectivas de estudio si se usa regularmente; métricas y exportación CSV para evaluar progreso.</td>
+                        <td>Normalmente no ofrece métricas de estudio ni exportación específica para análisis académico.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Personalización de rutinas</th>
+                        <td>Rutinas por asignatura, ajustes de duración y repetición programada.</td>
+                        <td>Plantillas básicas o listas de tareas sin programación avanzada por materia.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Evidencia/Transparencia técnica</th>
+                        <td>Repositorio con commits, tests unitarios mínimos y documentación de despliegue (apto para evaluación técnica).</td>
+                        <td>Apps comerciales suelen ocultar arquitectura y no entregan evidencia técnica en un TFG.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Privacidad y datos</th>
+                        <td>Anotación en la memoria sobre anonimización y permisos; exportación de datos en CSV para control del usuario.</td>
+                        <td>Varía; muchas apps recopilan datos para analítica sin opciones claras para exportar/anonymizar.</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Facilidad de evaluación (para tutor)</th>
+                        <td>Prototipo funcional + memoria bien documentada → fácil de evaluar en Entrega 2/3.</td>
+                        <td>Proyectos demasiado genéricos o con scope mal acotado complican la evaluación.</td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        
-        <section id="caracteristicas">
-            <h3>Características principales</h3>
-            <li>
-                <strong>Planifica:</strong> Establece periodos de tiempo para cada asignatura
-            </li>
-            <li>
-                <strong>Actua:</strong> De nada te sirve planificar tu semana entera de estudio si solo vas a llevar a cabo 1-2 dias, StudySync te motiva a seguir estudiando
-            </li>
-            <li>
-                <strong>Trackea tus estudios:</strong> Ten conocimiento pleano de que cuantos horas al dia estuida
-            </li>
-            <li>
-                <strong>Comprueba tus estadísticas:</strong> StudySync te permite saber cuantas horas has estudiado por asignatura, tus horas totales de estudio de una planificación y de un mes!!
-            </li>
+
+        <!-- SECCIÓN CARACTERÍSTICAS -->
+        <section id="caracteristicas" class="container py-5">
+            <h2>Características principales</h2>
+            <p class="mb-3">Funciones diseñadas para que estudiantes organicen sus sesiones, sigan su progreso y obtengan datos accionables.</p>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Planificación de rutinas</strong></h3>
+                    <p class="mb-0">Crea rutinas semanales por asignatura con duración prevista y prioridad. Ideal para distribuir carga de estudio.</p>
+                </li>
+
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Registro de sesiones</strong></h3>
+                    <p class="mb-0">Marca sesiones reales con fecha, duración y materia —ideal para medir cumplimiento frente al plan.</p>
+                </li>
+
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Dashboard de progreso</strong></h3>
+                    <p class="mb-0">Visualizaciones sencillas: tiempo total por materia, gráfico semanal y porcentaje de cumplimiento del plan.</p>
+                </li>
+
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Exportación e importación</strong></h3>
+                    <p class="mb-0">Exporta planes y sesiones en CSV para análisis fuera de la app; importa plantillas de rutinas.</p>
+                </li>
+
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Seguridad y privacidad</strong></h3>
+                    <p class="mb-0">Autenticación básica, datos almacenados en MySQL local o remoto según despliegue; la memoria documenta prácticas de anonimización.</p>
+                </li>
+
+                <li class="list-group-item">
+                    <h3 class="h5 mb-1"><strong>Soporte académico (IA-friendly)</strong></h3>
+                    <p class="mb-0">Tablas de progreso y resúmenes fragmentables diseñados para extracción por modelos (p. ej. resúmenes, comparativas por materia).</p>
+                </li>
+            </ul>
         </section>
 
         <section id="FAQ">
