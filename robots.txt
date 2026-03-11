@@ -4,6 +4,9 @@
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: facebot
+Allow: /
+
 User-agent: *
 Allow: /
 
