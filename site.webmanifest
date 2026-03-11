@@ -1,0 +1,26 @@
+{
+  "name": "StudySync",
+  "short_name": "StudySync",
+  "start_url": "/studysync-landing/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a74ff",
+  "description": "Gestor de rutinas y seguimiento del progreso de estudio.",
+  "icons": [
+    {
+      "src": "https://juanito2005.github.io/studysync-landing/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "https://juanito2005.github.io/studysync-landing/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "https://juanito2005.github.io/studysync-landing/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

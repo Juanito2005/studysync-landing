@@ -1,0 +1,11 @@
+# robots.txt para StudySync
+# Le doy acceso explícito a el rastreador de Facebook y permito el resto de bots
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://juanito2005.github.io/studysync-landing/sitemap.xml
