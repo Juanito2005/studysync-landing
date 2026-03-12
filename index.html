@@ -281,12 +281,175 @@
             </details>
         </section>
 
-        <section id="contacto">
+        <section id="contacto" class="container py-5">
+            <h2>Contacto</h2>
+            <p class="lead">¿Tienes dudas, sugerencias para el TFG o quieres colaborar? Escríbenos y te respondemos en breve.</p>
+
+            <div class="row g-4">
+                <!-- Formulario -->
+                <div class="col-lg-7">
+                <form id="contact-form" class="bg-secondary text-white p-4 rounded" autocomplete="on" novalidate>
+
+                    <input type="text" name="phone" id="hp-phone" class="d-none" tabindex="-1" autocomplete="off">
+                    
+                    <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required aria-required="true" maxlength="100" data-field="name">
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@ejemplo.com" required aria-required="true" maxlength="254" data-field="email">
+                    <div class="form-text">Usaremos tu correo solo para responder; no compartimos datos.</div>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="subject" class="form-label">Asunto</label>
+                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Ej. Consulta sobre Entrega 2" maxlength="150" data-field="subject">
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="6" placeholder="Escribe aquí tu mensaje..." required aria-required="true" maxlength="2000" data-field="message"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2 align-items-center">
+                    <button type="submit" class="btn btn-info fw-bold" id="contact-submit">Enviar mensaje</button>
+                    <button type="button" class="btn btn-outline-light" id="contact-reset" onclick="document.getElementById('contact-form').reset()">Limpiar</button>
+                    <div id="contact-status" role="status" aria-live="polite" class="ms-3 visually-hidden"></div>
+                    </div>
+
+                    <p class="mt-3 small text-muted">Al enviar aceptas que almacenemos temporalmente tus datos para responder. Consulta nuestra <a href="#privacy" class="link-info">política de privacidad</a>.</p>
+                </form>
+
+                <!-- JavaScript mínimo para fallback y validación ligera (insertar antes de cierre body) -->
+                <script>
+                    (function(){
+                    const form = document.getElementById('contact-form');
+                    const status = document.getElementById('contact-status');
+
+                    form.addEventListener('submit', function(e){
+                        e.preventDefault();
+                        // Honeypot check
+                        if (document.getElementById('hp-phone').value) return;
+
+                        // Simple validation
+                        const email = form.email.value.trim();
+                        const name = form.name.value.trim();
+                        const message = form.message.value.trim();
+                        if (!name || !email || !message) {
+                        status.textContent = 'Por favor, completa los campos obligatorios.';
+                        status.classList.remove('visually-hidden');
+                        return;
+                        }
+
+                        // Fallback: abrir mailto con contenido (útil para entrega sin backend)
+                        const subject = encodeURIComponent(form.subject.value || 'Contacto StudySync');
+                        const bodyLines = [
+                        'Nombre: ' + name,
+                        'Correo: ' + email,
+                        '',
+                        'Mensaje:',
+                        message
+                        ];
+                        const body = encodeURIComponent(bodyLines.join('\\n'));
+                        const mailto = 'mailto:studysync.contacto@example.com' + '?subject=' + subject + '&body=' + body;
+                        window.location.href = mailto;
+                        status.textContent = 'Se abrirá tu cliente de correo para completar el envío (fallback).';
+                        status.classList.remove('visually-hidden');
+                    });
+                    })();
+                </script>
+                </div>
+
+                <!-- Panel lateral con datos estructurados (IA-friendly) -->
+                <aside class="col-lg-5">
+                <div class="card bg-dark text-white border-0">
+                    <div class="card-body">
+                    <h3 class="h5 text-info">Canales de contacto</h3>
+
+                    <!-- Tabla de fácil extracción para IA -->
+                    <table class="table table-borderless table-sm text-white mt-3" aria-label="Métodos de contacto" data-ia="contact-methods">
+                        <tbody>
+                        <tr>
+                            <th scope="row">Soporte por correo</th>
+                            <td><a class="link-info" href="mailto:studysync.contacto@example.com">studysync.contacto@example.com</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">GitHub (repositorio)</th>
+                            <td><a class="link-info" href="https://github.com/Juanito2005/studysync" target="_blank" rel="noopener noreferrer">github.com/Juanito2005/studysync</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Horario de respuesta</th>
+                            <td>Lu-Vi 09:00–18:00 CET (respuestas en 48-72 h hábiles)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tipo de soporte</th>
+                            <td>Consultas técnicas, dudas sobre el TFG, colaboración académica</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <hr class="border-secondary">
+
+                    <h3 class="h6 text-info">Contactos rápidos</h3>
+                    <ul class="list-unstyled mt-2" data-ia="quick-links">
+                        <li><a class="link-info" href="#FAQ">Preguntas frecuentes</a></li>
+                        <li><a class="link-info" href="#caracteristicas">Ver características</a></li>
+                        <li><a class="link-info" href="https://juanito2005.github.io/studysync-landing/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a></li>
+                    </ul>
+
+                    <hr class="border-secondary">
+
+                    <p class="small text-muted mb-0"><strong>Privacidad:</strong> Solo usamos los datos que nos proporcionas para responder. No cedemos datos a terceros. Para el TFG, la memoria documenta prácticas de anonimización.</p>
+                    </div>
+                </div>
+                </aside>
+            </div>
+
+            <!-- ContactPage JSON-LD para SEO / IA-->
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ContactPage",
+                "mainEntity": {
+                "@type": "Organization",
+                "name": "StudySync",
+                "url": "https://juanito2005.github.io/studysync-landing/",
+                "contactPoint": [
+                    {
+                    "@type": "ContactPoint",
+                    "email": "studysync.contacto@example.com",
+                    "contactType": "customer support",
+                    "availableLanguage": ["Spanish", "English"],
+                    "hoursAvailable": "Mo-Fr 09:00-18:00"
+                    }
+                ]
+                }
+            }
+            </script>
+
+            <!-- Enlace a política de privacidad mínima (ancla interna IA-friendly) -->
+            <div id="privacy" class="mt-4">
+                <h4 class="h6 text-info">Política de privacidad (resumen)</h4>
+                <p class="small text-muted">Recogemos únicamente los datos que nos facilitas en el formulario para contestar tu consulta. Conservación temporal: 90 días. Derechos: acceso, rectificación, supresión; contactar a <a class="link-info" href="mailto:studysync.contacto@example.com">studysync.contacto@example.com</a>.</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-
+    <footer class="bg-dark text-center text-white py-4 border-top border-secondary">
+        <div class="container">
+            <p class="mb-2">© 2026 StudySync. Proyecto de TFG creado por Juan Camilo Garcia Cuevas. Todos los derechos reservados.</p>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://github.com/Juanito2005" target="_blank" class="text-info" aria-label="Visitar el perfil de GitHub del creador">
+                    GitHub
+                </a>
+                <a href="linkedin.com/in/juan-camilo-garcia-cuevas-917a7a288" target="_blank" class="text-info" aria-label="Visitar el perfil de LinkedIn del creador">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
