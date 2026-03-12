@@ -322,7 +322,6 @@
                     <p class="mt-3 small text-muted">Al enviar aceptas que almacenemos temporalmente tus datos para responder. Consulta nuestra <a href="#privacy" class="link-info">política de privacidad</a>.</p>
                 </form>
 
-                <!-- JavaScript mínimo para fallback y validación ligera (insertar antes de cierre body) -->
                 <script>
                     (function(){
                     const form = document.getElementById('contact-form');
@@ -343,7 +342,6 @@
                         return;
                         }
 
-                        // Fallback: abrir mailto con contenido (útil para entrega sin backend)
                         const subject = encodeURIComponent(form.subject.value || 'Contacto StudySync');
                         const bodyLines = [
                         'Nombre: ' + name,
