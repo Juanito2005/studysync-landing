@@ -41,8 +41,75 @@
     <meta name="twitter:title" content="StudySync - Gestor de rutinas y progreso de estudio efectivo">
     <meta name="twitter:description" content="Crea planes de estudio, registra sesiones y visualiza tu avance con métricas claras. Prueba StudySync gratis.">
     <meta name="twitter:image" content="https://juanito2005.github.io/studysync-landing/images/og-study-sync.png">
+
+    <!-- JSON-LD (FAQ + Mi organización + App/Software) -->
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+            "@type": "Organization",
+            "name": "StudySync",
+            "url": "https://juanito2005.github.io/studysync-landing/",
+            "logo": "https://juanito2005.github.io/studysync-landing/images/favicon-32x32.png",
+            "sameAs": []
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "StudySync",
+            "operatingSystem": "Web",
+            "applicationCategory": "EducationApplication",
+            "url": "https://juanito2005.github.io/studysync-landing/",
+            "image": "https://juanito2005.github.io/studysync-landing/images/og-study-sync.png",
+            "description": "StudySync es una aplicación web para gestionar rutinas de estudio, registrar sesiones y visualizar progreso con métricas claras.",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué es StudySync?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "StudySync es una aplicación web para planificar rutinas de estudio, registrar sesiones y visualizar el progreso mediante métricas sencillas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Por qué StudySync es gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pese a la gran cantidad de features y ayudas que StudySync ofrece, StudySync fue creado por amor a la educación y programación, asi que no vamos a cobrar por ello pero estamos abiertos a donaciones"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Qué datos guarda StudySync?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "StudySync guarda datos de usuario (correo), rutinas y registros de sesiones. En el entregable se mostrarán prácticas de anonimización y cumplimiento básico de privacidad."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Cómo exporto mis datos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El MVP incluye exportación en CSV para planes y sesiones; la memoria describe el procedimiento técnico para exportar e importar datos."
+                }
+            }
+            ]
+        }
+        ]
+    }
+    </script>
 </head>
-<body data-bs-theme="dark" class="bg-dark" text="light">
+<body data-bs-theme="dark" class="bg-dark text-light">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary fixed-top">
             <div class="container">
@@ -194,7 +261,24 @@
             </ul>
         </section>
 
-        <section id="FAQ">
+        <section id="FAQ" class="container py-5">
+            <h2>Preguntas Frecuentes</h2>
+            <details>
+                <summary class="h5 text-info fw-bold" style="cursor: pointer;">¿Qué es StudySync?</summary>
+                <p class="mt-2">StudySync es una aplicación web para planificar rutinas de estudio, registrar sesiones y visualizar el progreso mediante métricas sencillas.</p>
+            </details>
+            <details>
+                <summary class="h5 text-info fw-bold" style="cursor: pointer;">¿Por qué StudySync es gratis?</summary>
+                <p class="mt-2">Pese a la gran cantidad de features y ayudas que StudySync ofrece, StudySync fue creado por amor a la educación y programación, asi que no vamos a cobrar por ello pero estamos abiertos a donaciones</p>
+            </details>
+            <details>
+                <summary class="h5 text-info fw-bold" style="cursor: pointer;">¿Qué datos guarda StudySync?</summary>
+                <p class="mt-2">StudySync guarda datos de usuario (correo), rutinas y registros de sesiones. En el entregable se mostrarán prácticas de anonimización y cumplimiento básico de privacidad.</p>
+            </details>
+            <details>
+                <summary class="h5 text-info fw-bold" style="cursor: pointer;">¿Cómo exporto mis datos?</summary>
+                <p class="mt-2">El MVP incluye exportación en CSV para planes y sesiones; la memoria describe el procedimiento técnico para exportar e importar datos.</p>
+            </details>
         </section>
 
         <section id="contacto">
