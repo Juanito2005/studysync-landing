@@ -1,11 +1,11 @@
 # StudySync - Landing Page Optimizada (SPA) 🚀
 
-## 📖 Descripción del Proyecto
+## Descripción del Proyecto
 Este repositorio contiene el desarrollo de una Single Page Application (SPA) para **StudySync**, una aplicación ficticia de gestión de rutinas de estudio.
 
 El objetivo principal de este proyecto es aplicar técnicas avanzadas de Posicionamiento y Optimización Web (SEO), adaptando el contenido no solo para motores de búsqueda tradicionales, sino también para modelos de Inteligencia Artificial (IA-Friendly).
 
-## ✨ Requisitos Técnicos Implementados
+## Requisitos Técnicos Implementados
 
 A lo largo del código (`index.html`), se han aplicado las siguientes capas de optimización:
 
@@ -32,12 +32,12 @@ A lo largo del código (`index.html`), se han aplicado las siguientes capas de o
 - Navegación clara mediante menú *sticky* con *smooth scroll* (enlaces ancla).
 - Formularios accesibles con correcta vinculación de `<label>` e `<input>`, además de atributos `aria-required` y `aria-label` en enlaces de iconos.
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 - **HTML5:** Estructura semántica.
 - **Bootstrap 5 (CDN):** Estilos, sistema de rejilla y componentes UI.
 - **JSON-LD:** Marcado de datos estructurados para SEO Técnico.
 
-## 🚀 Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 El proyecto no requiere de ningún entorno de servidor adicional ni instalación de dependencias.
 1. Clona este repositorio.
 2. Abre el archivo `index.html` directamente en cualquier navegador web moderno.
